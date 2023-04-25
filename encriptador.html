@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<!--Define el tipo de documento como HTML5-->
+<html lang="es"> 
+<!--Establece el idioma principal de la pagina como espanol.-->
+<head>
+    <!--Etiqueta que contiene información sobre el documento-->
+    <meta charset="UTF-8">
+    <!--Define la codificación de caracteres de la página, como conjunto de caracteres universal-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Compatibilidad para Internet Explorer-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Establece cómo se debe escalar y ajustar el contenido de la página en dispositivos móviles-->
+    <title>Encriptador | Oracle+AluraLATAM</title>
+    <!--Título de la página web que se muestra en la pestaña del navegador-->
+    <link rel="shortcut icon" href="./img/logo-a.svg" type="image/x-icon">
+    <!--Agrega un icono a la pestaña del navegador-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Conexion a sitio web donde se obtenienen las fuentes-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!--Etiqueta de enlace CSS - El propósito de este archivo CSS es restablecer o normalizar los estilos predeterminados de los elementos HTML-->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!--Etiqueta de enlace CSS - Contiene reglas de estilo específicas para el diseño y la apariencia visual del sitio web-->
+</head>
+<body>
+<!--Contenido principal del documento HTML y contiene todos los elementos visibles que se mostrarán en la página web-->
+    <header>
+    <!--Cabecera-->
+        <div class="contenedor">
+        <!--div - Crea un contenedor genérico-->
+            <div class="header_logos">
+                <div class="header_img">
+                <!--Las clases CSS permiten aplicar estilos específicos a elementos HTML que comparten la misma clase-->
+                    <img src="./img/logo-a.svg" alt="Logo de Alura">
+                    <!-- Etiqueta de imagen-->
+                </div>
+                    <div class="header_img">
+                    <img src="./img/logo-one.webp" alt="Logo ONE">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+    <!--Indica el contenido principal de una página-->
+        <div class="contenedor">
+            <div class="encriptador">
+                <form class="encriptador_form">
+                    <div class="text_in">
+                        <textarea name="text_in_area" id="texto" placeholder="Ingrese el texto aqui" required></textarea>
+                        <!--Elemento de formulario que permite a los usuarios ingresar y editar texto en un área de texto de varias líneas-->
+                        <div class="text_in_info">
+                            <div class="info">
+                                <img src="./img/vector.svg" alt="">
+                                <p id="warning">Solo letras minúsculas y sin acentos</p>
+                                <!-- Elemento de párrafo - Se usa el "id" para manipular el contenido usando JavaScript-->
+                            </div>
+                            <div class="text_in_btns">
+                                <input id="enc" type="button" value="Encriptar">
+                                <input id="des" type="button" value="Desencriptar">
+                                <!--Botones - activa acción en JavaScript asociada al evento de clic-->
+                            </div> 
+                        </div>
+                    </div>
+                </form>
+
+                <section class="text_out_sec">
+                <!--Agrupa contenido relacionado y significativo semánticamente-->
+                    <div class="out_content">
+                        <div class="content" id="default">
+                            <div class="text_out_img">
+                                <img src="./img/muneco.svg" alt="Imagen de animada">
+                            </div><p>Ningún mensaje fue encontrado</p>
+                            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                            <!--Esto se mostrará en la sección de salida de la página web hasta que se ingrese algún texto en el área de entrada-->
+                        </div>
+                        <div class = "content invisible" id="result">
+                            <textarea name="text_out_area" id="texto_out" disabled></textarea>
+                            <button id="copiar">Copiar</button>
+                            <!--La sección está oculta inicialmente y se muestra solo después de que se haya procesado el texto y permite copiarlo para revertir la acción-->
+                        </div>
+                    </div>  
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Desarrollado por Miguel H. D'Alessandro</p>
+    </footer>
+</body>
+
+<script src="./js/encriptador.js"></script>
+<!--código que define el comportamiento interactivo de la página-->
+</html>
